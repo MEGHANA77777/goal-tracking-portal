@@ -9,6 +9,7 @@ import authRoutes from './modules/auth/auth.routes';
 import goalsRoutes from './modules/goals/goals.routes';
 import cyclesRoutes from './modules/cycles/cycles.routes';
 import managerRoutes from './modules/manager/manager.routes';
+import checkinsRoutes from './modules/checkins/checkins.routes';
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ app.get('/health', (req, res) => {
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/cycles', cyclesRoutes);
 app.use('/api/v1/manager', managerRoutes);
+app.use('/api/v1/checkins', checkinsRoutes);
 app.use('/api/v1', goalsRoutes);
 
 // Error handling
