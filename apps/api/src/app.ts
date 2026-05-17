@@ -6,6 +6,8 @@ import dotenv from 'dotenv';
 import logger from './lib/logger';
 import { errorMiddleware } from './middleware/error.middleware';
 import authRoutes from './modules/auth/auth.routes';
+import goalsRoutes from './modules/goals/goals.routes';
+import cyclesRoutes from './modules/cycles/cycles.routes';
 
 dotenv.config();
 
@@ -29,6 +31,8 @@ app.get('/health', (req, res) => {
 
 // API Routes
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/cycles', cyclesRoutes);
+app.use('/api/v1', goalsRoutes);
 
 // Error handling
 app.use(errorMiddleware);
