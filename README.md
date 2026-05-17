@@ -13,6 +13,8 @@ Enterprise-grade goal management system with quarterly check-ins, manager approv
 
 1. **Clone and Install Dependencies**
 ```bash
+git clone https://github.com/MEGHANA77777/goal-tracking-portal.git
+cd goal-tracking-portal
 npm install
 ```
 
@@ -24,11 +26,11 @@ docker-compose up -d
 3. **Setup Database**
 ```bash
 cd apps/api
-npx prisma migrate dev
+npx prisma migrate dev --name init
 npx prisma db seed
 ```
 
-4. **Start Development Servers**
+4. **Start Development Server**
 ```bash
 # From root directory
 npm run dev
@@ -43,6 +45,8 @@ Admin:    admin@company.com / password123
 Manager:  manager@company.com / password123
 Employee: employee@company.com / password123
 ```
+
+**📖 For detailed setup instructions, see [SETUP_GUIDE.md](./SETUP_GUIDE.md)**
 
 ## 📁 Project Structure
 
