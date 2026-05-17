@@ -11,6 +11,7 @@ import cyclesRoutes from './modules/cycles/cycles.routes';
 import managerRoutes from './modules/manager/manager.routes';
 import checkinsRoutes from './modules/checkins/checkins.routes';
 import adminRoutes from './modules/admin/admin.routes';
+import reportsRoutes from './modules/reports/reports.routes';
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ app.use('/api/v1/cycles', cyclesRoutes);
 app.use('/api/v1/manager', managerRoutes);
 app.use('/api/v1/checkins', checkinsRoutes);
 app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/reports', reportsRoutes);
 app.use('/api/v1', goalsRoutes);
 
 // Error handling
